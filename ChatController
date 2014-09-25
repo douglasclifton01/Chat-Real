@@ -1,0 +1,19 @@
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
+import javax.swing.border.*;
+
+public displayText() {
+    String message = sendText.getText().trim();
+    StringBuilder buffer = new StringBuilder(message.length());{
+    
+    // now reverse it
+    for (int i = message.length()-1; i >= 0; i--)
+      buffer.append(message.charAt(i));
+    
+    displayArea.append(buffer.toString() + "\n");
+    
+    sendText.setText("");
+    sendText.requestFocus();
+  }
+}
