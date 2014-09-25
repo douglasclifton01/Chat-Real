@@ -1,0 +1,15 @@
+ import javax.swing.*; 
+
+
+private final JFrame frame;
+  
+  public ChatScreen() {
+    frame = new JFrame("Demo");
+    
+    /** anonymous inner class to handle window closing events */
+    frame.addWindowListener(new WindowAdapter() {
+      @Override
+      public void windowClosing(WindowEvent evt) {
+        System.exit(0);
+      }
+    } );
